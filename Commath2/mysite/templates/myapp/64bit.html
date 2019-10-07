@@ -1,0 +1,28 @@
+{% extends 'myapp/bar/navbar.html' %}
+
+{% block content %}
+<center>
+    <section id="contact-page">
+        <div class="container">
+            <div class="center">
+                <h2>แปลงเลขทศนิยมเป็น IEEE 64bit</h2>
+            </div>
+            <center>
+                <form action='' method="post">
+                    {% csrf_token %}
+                    <input name="x" type="number" step=any class="form-control" placeholder="ค่าที่ต้องการแปลง"/ value="{{d}}">
+                    <br>
+                    <input type="submit" class="btn btn-primary" ></input>
+                </form>
+    
+                <h2><strong> ผลลัพธ์ </strong></h2>
+                <h4>s = {{s}}</h4>
+                <h4>e = {{e}}</h4>
+                <h4>f = {{f}}</h4>
+                <br>
+                <h2><strong> แปลงกลับเป็น </strong></h2>
+                <h4>{{conb}}</h4>
+            </center>
+    </section>
+</center>
+{% endblock content %}

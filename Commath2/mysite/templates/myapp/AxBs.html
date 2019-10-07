@@ -1,0 +1,32 @@
+{% extends 'myapp/bar/navbar.html' %}
+
+{% block content %}
+<section>
+    <center>
+        <div class="container form-color">
+            <div>
+                <h2>กรุณากรอกค่าต่อไปนี้</h2>
+                <form action='' method="post">
+                    {% csrf_token %}
+                    <textarea name="data" rows="7" cols="20"> </textarea>
+                    <br><br>
+                    <input type="submit" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+        <div class="container form-color">
+            <div>
+                <h2>ผลลัพธ์</h2>
+                {% for r in results %}
+                {{r}},
+                {% endfor %}
+                <hr>
+                {% for i, j in mylist %}
+                {{ i }} = {{ j }} <br>
+                {% endfor %}
+                <br>
+            </div>
+        </div>
+    </center>
+</section>
+{% endblock content %}
