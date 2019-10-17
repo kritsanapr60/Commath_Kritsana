@@ -8,4 +8,8 @@ urlpatterns = [
     path('32bit/', views.decto32fp),
     path('64bit/', views.decto64fp),
     path('AxBs/', views.AxBs),
+
+    path('Differentiation/', views.differentiation),
+    path('Integration/', views.integration),
+    path('Rootfinding/', views.rootfinding),
 ]
